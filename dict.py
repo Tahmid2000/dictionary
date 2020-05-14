@@ -19,7 +19,7 @@ def findWord(inp):
 def similarWord(inp):
     closeMatch = difflib.get_close_matches(inp, data.keys(), 5, .7)
     for word in closeMatch:
-        toinput = 'Did you mean ' + str(word) + '?\n'
+        toinput = 'Did you mean ' + str(word) + '? (Yes or No)\n'
         yesNo = input(toinput)
         if yesNo.lower() == 'yes':
             return word
@@ -33,5 +33,12 @@ def printList(theList):
     return output
 
 
-toFind = input('Input word:\n')
-print(findWord(toFind))
+def main():
+    toFind = input('Input word (empty string to quit):\n')
+    while toFind != '':
+        print(findWord(toFind))
+        toFind = input('Input word (empty string to quit):\n')
+
+
+if __name__ == "__main__":
+    main()
