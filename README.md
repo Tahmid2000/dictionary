@@ -1,0 +1,1 @@
+Intuitive dictionary using a local MySQL database. Searches a database of words and returns all definitions of that word. If user inputs an incorrect word, the program prompts user for words they might've meant and outputs the meaning if so.
